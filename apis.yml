@@ -1,0 +1,118 @@
+aid: flowbird
+url: https://raw.githubusercontent.com/api-evangelist/flowbird/refs/heads/main/apis.yml
+name: Flowbird
+kind: company
+description: Flowbird is a global urban mobility and parking technology company that
+  builds pay stations, mobile parking apps, digital permits, EV charging, and transit
+  ticketing systems for cities and transport authorities worldwide. Flowbird was
+  acquired by EasyPark Group in an acquisition that closed in January 2025. Its
+  integration surface is the Flowbird HUB, an open platform that exposes documented
+  but partner/agency-gated APIs (OAuth2 and client-certificate secured, with
+  role-based access control and ownership filters) for tariffs, rights/permits,
+  parking sessions, pay stations, and transactions. There is no self-service public
+  sign-up; access is granted to cities, transport agencies, and integration partners
+  under contract.
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+tags:
+- Parking
+- Urban Mobility
+- Transit Ticketing
+- Payments
+- Smart City
+- Pay Stations
+- EV Charging
+- Digital Permits
+- Partner Gated
+created: '2026-07-03'
+modified: '2026-07-03'
+specificationVersion: '0.19'
+apis:
+- aid: flowbird:flowbird-hub-parking-sessions-api
+  name: Flowbird HUB Parking Sessions API
+  tags:
+  - Parking Sessions
+  - Mobile Parking
+  - Enforcement
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  humanURL: https://docs.flowbirdhub.com/
+  endpointsModeled: true
+  properties:
+  - url: https://docs.flowbirdhub.com/
+    type: Documentation
+  - url: https://www.flowbird.com/our-solutions/parking-solutions/open-platform-for-parking-and-e-mobility/
+    type: Documentation
+  description: Start, stop, extend, and query active and historical parking sessions
+    across pay-station, mobile-app, and permit channels, and expose real-time
+    session state to enforcement and occupancy consumers. Endpoints are modeled from
+    Flowbird HUB platform descriptions; the live reference at docs.flowbirdhub.com
+    is OAuth2/certificate secured and access is granted to cities and partners under
+    contract.
+- aid: flowbird:flowbird-hub-tariffs-rights-api
+  name: Flowbird HUB Tariffs and Rights API
+  tags:
+  - Tariffs
+  - Rights
+  - Permits
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  humanURL: https://docs.flowbirdhub.com/
+  endpointsModeled: true
+  properties:
+  - url: https://docs.flowbirdhub.com/
+    type: Documentation
+  - url: https://www.flowbird.com/our-solutions/parking-solutions/open-platform-for-parking-and-e-mobility/
+    type: Documentation
+  description: Configure and read parking tariffs, pricing rules, and rights (digital
+    permits, subscriptions, and eligibility) consistently across every sales channel.
+    Flowbird documents that tariffs and rights can be managed either through the HUB
+    user interface or via the API; endpoints here are modeled from that platform
+    description and the live surface is partner/agency-gated.
+- aid: flowbird:flowbird-hub-pay-stations-api
+  name: Flowbird HUB Pay Stations API
+  tags:
+  - Pay Stations
+  - Terminals
+  - Assets
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  humanURL: https://docs.flowbirdhub.com/
+  endpointsModeled: true
+  properties:
+  - url: https://docs.flowbirdhub.com/
+    type: Documentation
+  - url: https://www.flowbird.com/our-solutions/parking-solutions/open-platform-for-parking-and-e-mobility/
+    type: Documentation
+  description: Retrieve the inventory, configuration, health/status, and collection
+    (coin, card, and cash) data for Flowbird pay stations and terminals managed by
+    the central platform. Endpoints are modeled from Flowbird HUB asset-management
+    descriptions; the documented live API is certificate-secured and access-scoped
+    per contract.
+- aid: flowbird:flowbird-hub-transactions-api
+  name: Flowbird HUB Transactions API
+  tags:
+  - Transactions
+  - Payments
+  - Reporting
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  humanURL: https://docs.flowbirdhub.com/
+  endpointsModeled: true
+  properties:
+  - url: https://docs.flowbirdhub.com/
+    type: Documentation
+  - url: https://www.flowbird.com/our-solutions/parking-solutions/open-platform-for-parking-and-e-mobility/
+    type: Documentation
+  description: Read parking and mobility payment transactions and revenue/reporting
+    data across channels for reconciliation and analytics, with role-based access
+    and ownership filters. Endpoints are modeled from Flowbird HUB reporting/export
+    descriptions; the live API is OAuth2/certificate secured and granted under
+    contract, with bulk export also available via Flowbird's service desk.
+common:
+- type: LinkedIn
+  url: https://www.linkedin.com/company/flowbird
+- type: Website
+  url: https://www.flowbird.group
+- type: Documentation
+  url: https://docs.flowbirdhub.com/
+- type: PartnerAccess
+  url: https://www.flowbird.com/customer-partner-access/
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com

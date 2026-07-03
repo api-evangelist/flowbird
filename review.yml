@@ -1,0 +1,84 @@
+aid: flowbird
+name: Flowbird
+review:
+  question: Does Flowbird expose a documented public WebSocket API?
+  answer: false
+  date: '2026-07-03'
+  reviewer: API Evangelist
+  asyncapiSpecCreated: false
+  asyncapiScopeNote: |
+    No AsyncAPI document was authored. Flowbird's integration surface (the
+    Flowbird HUB open platform) is described as OAuth2/certificate-secured REST
+    over HTTPS with role-based access control; no server-push transport
+    (WebSocket or SSE) is documented on it. There is no client-facing wss://
+    stream to model.
+findings:
+  summary: |
+    Flowbird does not publish a documented public WebSocket API. Flowbird is an
+    urban mobility and parking technology company (pay stations, mobile parking,
+    digital permits, EV charging, transit ticketing) serving cities and transport
+    authorities, now owned by EasyPark Group (acquisition closed January 2025).
+    Its integration surface is the Flowbird HUB open platform, documented at
+    docs.flowbirdhub.com (Stoplight), secured with OAuth2 and client certificates
+    plus role-based access control and ownership filters. Flowbird HUB is
+    described as REST-style, request/response HTTPS APIs; no WebSocket (ws:// or
+    wss://) endpoint is documented. No realtime, bidirectional, or streaming
+    WebSocket endpoint is documented on any Flowbird surface as of the review
+    date.
+  ownership: |
+    Flowbird is owned by EasyPark Group, whose acquisition of Flowbird closed in
+    January 2025. Note: the ParkWhiz/BestParking parking product and its v4
+    developer API are NOT part of Flowbird - that lineage (ParkWhiz + BestParking
+    -> Arrive/Arrive Mobility) merged into FlashParking (Flash) in January 2021
+    and sits under Flash, and is cataloged separately (see all/parkwhiz). Flowbird
+    does not own or expose the ParkWhiz/Arrive v4 API. EasyPark Group separately
+    acquired rights to the "Arrive" name from Flash (2025), which does not change
+    Flowbird's own API surface.
+  accessModel: |
+    Flowbird HUB is partner/agency-gated. There is no self-service developer
+    sign-up. Access is granted to cities, transport agencies, and integration
+    partners under contract, controlled per API certificate and OAuth2 client with
+    role-based scopes; pricing is contract/tender-based (e.g. G-Cloud listings)
+    and not published. Because no public endpoint reference is available for
+    Flowbird HUB (the Stoplight docs are a gated JS SPA), its API entries in
+    apis.yml are marked endpointsModeled: true - logical APIs derived from
+    Flowbird's published platform descriptions rather than a scraped reference.
+  transports:
+    - protocol: REST
+      scheme: https
+      documented: true
+      note: Flowbird HUB open platform (docs.flowbirdhub.com). OAuth2/certificate secured, agency/partner gated. No public endpoint reference; endpoints modeled.
+    - protocol: WebSocket
+      scheme: wss
+      documented: false
+      note: No WebSocket endpoint is documented on Flowbird HUB as of the review date.
+  endpointsModeled:
+    - Flowbird HUB Parking Sessions (start/stop/extend/query sessions) - modeled, not publicly referenced
+    - Flowbird HUB Tariffs and Rights (tariff and permit configuration) - modeled, not publicly referenced
+    - Flowbird HUB Pay Stations (terminal inventory/status/collections) - modeled, not publicly referenced
+    - Flowbird HUB Transactions (payment and reporting data) - modeled, not publicly referenced
+sources:
+  - url: https://www.flowbird.com/our-solutions/parking-solutions/open-platform-for-parking-and-e-mobility/
+    type: Documentation
+    note: Flowbird HUB open platform - OAuth2 and certificate security, role-based access, third-party APIs. No WebSocket mentioned.
+  - url: https://docs.flowbirdhub.com/
+    type: Documentation
+    note: Flowbird HUB developer documentation on Stoplight (JS SPA; content is gated/not crawlable). REST-style, secured surface.
+  - url: https://www.flowbird.com/customer-partner-access/
+    type: Documentation
+    note: Partner/customer access hub (WebOffice, Flowbird Go, GesBlue, etc.); no self-service developer program or public pricing.
+  - url: https://apitracker.io/a/flowbirdapp
+    type: Reference
+    note: Third-party API Tracker profile; no public developer docs, SDKs, or base URL cataloged for the consumer parking app.
+actions:
+  asyncapiPath: null
+  apisYmlUpdated: true
+  reason: |
+    No WebSocket protocol surface exists on Flowbird's API. Flowbird's integration
+    surface (Flowbird HUB) is OAuth2/certificate secured REST that is
+    partner/agency-gated with no public endpoint reference, so its APIs are
+    cataloged as modeled logical APIs (endpointsModeled: true). No AsyncAPI
+    document was created because there is no consumer-facing server-push
+    (WebSocket/SSE) transport to model. The ParkWhiz/Arrive v4 API is NOT a
+    Flowbird surface (it sits under FlashParking) and is intentionally excluded
+    from this entry.
