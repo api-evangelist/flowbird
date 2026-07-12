@@ -105,6 +105,8 @@ apis:
     descriptions; the live API is OAuth2/certificate secured and granted under
     contract, with bulk export also available via Flowbird's service desk.
 common:
+- type: DomainSecurity
+  url: security/flowbird-domain-security.yml
 - type: LinkedIn
   url: https://www.linkedin.com/company/flowbird
 - type: Website
@@ -113,6 +115,8 @@ common:
   url: https://docs.flowbirdhub.com/
 - type: PartnerAccess
   url: https://www.flowbird.com/customer-partner-access/
+- type: Blog
+  url: https://www.flowbird.com/news/
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
