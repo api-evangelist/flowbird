@@ -12,7 +12,18 @@ description: Flowbird is a global urban mobility and parking technology company 
   parking sessions, pay stations, and transactions. There is no self-service public
   sign-up; access is granted to cities, transport agencies, and integration partners
   under contract.
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/flowbird.png
 tags:
 - Parking
 - Urban Mobility
