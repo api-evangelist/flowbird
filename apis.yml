@@ -99,6 +99,10 @@ apis:
 - aid: flowbird:flowbird-hub-transactions-api
   name: Flowbird HUB Transactions API
   tags:
+  - Transaction
+  - Payments
+  - Reporting
+  tags_raw:
   - Transactions
   - Payments
   - Reporting
