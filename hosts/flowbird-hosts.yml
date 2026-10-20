@@ -1,0 +1,87 @@
+generated: '2026-10-20'
+method: derived
+source: the pre-flight dossier, apis.yml pointers, spec servers, well-known, vendors -- nothing fetched here
+generator: derive-hosts.py
+summary:
+  hosts: 6
+  own: 2
+  other_domain: 4
+  platform: 0
+  roles:
+  - api
+  - marketing
+  - portal
+  - website
+hosts:
+- host: api.flowbird.com
+  found_by:
+  - contract-discovery
+  types: []
+  serves: []
+  registrable_domain: flowbird.com
+  role: api
+  relation: other-domain
+- host: api.flowbird.group
+  found_by:
+  - contract-discovery
+  types: []
+  serves: []
+  registrable_domain: flowbird.group
+  role: api
+  relation: own
+- host: api.flowbirdhub.com
+  found_by:
+  - contract-discovery
+  types: []
+  serves: []
+  registrable_domain: flowbirdhub.com
+  role: api
+  relation: other-domain
+- host: docs.flowbirdhub.com
+  found_by:
+  - pointer
+  - apis[]
+  - probed
+  - docs-index
+  - contract-discovery
+  - well-known
+  - vendor-detect
+  types:
+  - GettingStarted
+  - DeveloperPortal
+  - Documentation
+  serves:
+  - docs
+  - cdn
+  - documentation
+  vendor: cloudflare
+  registrable_domain: flowbirdhub.com
+  role: portal
+  relation: other-domain
+- host: www.flowbird.com
+  found_by:
+  - pointer
+  - probed
+  - contract-discovery
+  - well-known
+  types:
+  - TermsOfService
+  - PrivacyPolicy
+  - Newsroom
+  - PartnerAccess
+  - Blog
+  serves: []
+  registrable_domain: flowbird.com
+  role: marketing
+  relation: other-domain
+- host: www.flowbird.group
+  found_by:
+  - pointer
+  - probed
+  - well-known
+  types:
+  - Website
+  serves: []
+  registrable_domain: flowbird.group
+  role: website
+  relation: own

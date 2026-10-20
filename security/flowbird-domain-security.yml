@@ -1,16 +1,16 @@
-generated: '2026-07-11'
+generated: '2026-10-20'
 method: probed
 source: live DNS/TLS/HTTP probes of apis.yml + OpenAPI hosts
 hosts:
 - host: www.flowbird.group
   https: true
   tls_version: TLSv1.3
-  cert_expires: Sep  4 17:20:37 2026 GMT
+  cert_expires: Jan 12 02:25:33 2027 GMT
   hsts: false
 - host: docs.flowbirdhub.com
   https: true
   tls_version: TLSv1.3
-  cert_expires: Sep 17 02:55:52 2026 GMT
+  cert_expires: Jan 13 08:41:43 2027 GMT
   hsts: true
   hsts_max_age: 31536000
 domains:

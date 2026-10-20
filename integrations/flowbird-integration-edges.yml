@@ -1,4 +1,17 @@
-generated: '2026-10-13'
+generated: '2026-10-20'
+method: searched
+source:
+- https://zapier.com/apps/flowbird/integrations
+- https://n8n.io/integrations/flowbird/
+- https://composio.dev/toolkits/flowbird
+- https://monid.ai/tools/flowbird
+checked:
+- https://composio.dev/toolkits/flowbird
+- https://monid.ai/tools/flowbird
+- https://n8n.io/integrations/flowbird/
+- https://zapier.com/apps/flowbird/integrations
+summary: null
+marketplace_apps: []
 edges:
 - partner_name: openchargemap
   partner: openchargemap
@@ -10,5 +23,4 @@ edges:
   evidence: https://openchargemap.org/site/poi?operatorid=3739
   detected_by: sweep-automotive.py
   detected: '2026-10-13'
-method: searched
-checked: []
+templates: []

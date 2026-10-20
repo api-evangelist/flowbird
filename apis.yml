@@ -1,7 +1,11 @@
 aid: flowbird
+
 url: https://raw.githubusercontent.com/api-evangelist/flowbird/refs/heads/main/apis.yml
+
 name: Flowbird
+
 kind: company
+
 description: Flowbird is a global urban mobility and parking technology company that
   builds pay stations, mobile parking apps, digital permits, EV charging, and transit
   ticketing systems for cities and transport authorities worldwide. Flowbird was
@@ -12,6 +16,7 @@ description: Flowbird is a global urban mobility and parking technology company 
   parking sessions, pay stations, and transactions. There is no self-service public
   sign-up; access is granted to cities, transport agencies, and integration partners
   under contract.
+
 deliveryModel:
   model: unknown
   open_source: false
@@ -23,6 +28,7 @@ deliveryModel:
   - none
   generated: '2026-08-28'
   method: derived
+
 accessModel:
   pricing: unknown
   onboarding: unknown
@@ -37,10 +43,15 @@ accessModel:
   source: []
   generated: '2026-07-22'
   method: derived
+
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/flowbird.png
+
 x-docs-platform: stoplight
+
 x-docs-platform-confidence: high
+
 x-docs-platform-checked: 2026-10-03
+
 tags:
 - Parking
 - Urban Mobility
@@ -50,9 +61,45 @@ tags:
 - Pay Stations
 - EV Charging
 - Digital Permits
+
 created: '2026-07-03'
+
 modified: '2026-07-03'
+
 specificationVersion: '0.23'
+
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com
+
+common:
+- type: Hosts
+  url: hosts/flowbird-hosts.yml
+- type: IntegrationEdges
+  url: integrations/flowbird-integration-edges.yml
+- type: Vendors
+  url: vendors/flowbird-vendors.yml
+- type: TermsOfService
+  url: https://www.flowbird.com/terms-conditions/
+- type: PrivacyPolicy
+  url: https://www.flowbird.com/privacy-policy/
+- type: Newsroom
+  url: https://www.flowbird.com/media/podcasts/
+- type: GettingStarted
+  url: https://docs.flowbirdhub.com/#getting-started
+- type: DeveloperPortal
+  url: https://docs.flowbirdhub.com/
+- type: DomainSecurity
+  url: security/flowbird-domain-security.yml
+- type: Website
+  url: https://www.flowbird.group
+- type: Documentation
+  url: https://docs.flowbirdhub.com/
+- type: PartnerAccess
+  url: https://www.flowbird.com/customer-partner-access/
+- type: Blog
+  url: https://www.flowbird.com/news/
+
 apis:
 - aid: flowbird:flowbird-hub-parking-sessions-api
   name: Flowbird HUB Parking Sessions API
@@ -139,21 +186,35 @@ apis:
     and ownership filters. Endpoints are modeled from Flowbird HUB reporting/export
     descriptions; the live API is OAuth2/certificate secured and granted under
     contract, with bulk export also available via Flowbird's service desk.
-common:
-- type: DomainSecurity
-  url: security/flowbird-domain-security.yml
-- type: LinkedIn
-  url: https://www.linkedin.com/company/flowbird
-- type: Website
-  url: https://www.flowbird.group
-- type: Documentation
-  url: https://docs.flowbirdhub.com/
-- type: PartnerAccess
-  url: https://www.flowbird.com/customer-partner-access/
-- type: Blog
-  url: https://www.flowbird.com/news/
-maintainers:
-- FN: Kin Lane
-  email: kin@apievangelist.com
+
 x-tags-removed:
 - Partner Gated
+
+x-coverage:
+  state: unreadable
+  reason: no-machine-readable-spec
+  method: derived
+  generated: '2026-10-20'
+  generator: derive-coverage.py (pre-flight evidence)
+  detail: >-
+    the company publishes developer documentation but serves no machine-readable contract from it
+  evidence:
+  - url: https://www.flowbird.group
+    status: 200
+x-coverage:
+  state: gated
+  reason: customer-only-docs
+  detail: The Flowbird HUB API reference lives in a Stoplight workspace at docs.flowbirdhub.com that shows only the unedited Stoplight template to anonymous visitors, with no public projects, and access is routed through the Customer & Partner Access page.
+  evidence:
+  - url: https://docs.flowbirdhub.com/explore
+    status: 200
+  - url: https://docs.flowbirdhub.com/api/v1/projects
+    status: 404
+  - url: https://www.flowbird.com/customer-partner-access/
+    status: 200
+  checked: '2026-10-20'
+x-enrichment:
+  date: '2026-10-20'
+  status: minimal
+  artifacts_added: 2
+  pass: local-v5
