@@ -1,4 +1,4 @@
-# Flowbird (flowbird)
+# Flowbird
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -64,93 +64,91 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Flowbird is a global urban mobility and parking technology company that builds pay stations, mobile parking apps, digital permits, EV charging, and transit ticketing systems for cities and transport authorities worldwide. Flowbird was **acquired by EasyPark Group** in an acquisition that closed in **January 2025**. Its integration surface is the **Flowbird HUB**, an open platform that exposes documented but **partner/agency-gated** APIs (OAuth2 and client-certificate secured, with role-based access control and ownership filters) for tariffs, rights/permits, parking sessions, pay stations, and transactions.
+Flowbird is a global urban mobility and parking technology company that builds pay stations, mobile parking apps, digital permits, EV charging, and transit ticketing systems for cities and transport authorities worldwide. Flowbird was acquired by EasyPark Group in an acquisition that closed in January 2025. Its integration surface is the Flowbird HUB, an open platform that exposes documented but partner/agency-gated APIs (OAuth2 and client-certificate secured, with role-based access control and ownership filters) for tariffs, rights/permits, parking sessions, pay stations, and transactions. There is no self-service public sign-up; access is granted to cities, transport agencies, and integration partners under contract.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/flowbird/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/flowbird/refs/heads/main/apis.yml)
+**Areas:** Parking · Urban Mobility · Transit Ticketing · Payments · Smart City · Pay Stations · EV Charging · Digital Permits
 
-## Access Model (Read This First)
+## Flowbird on APIs.io
 
-Flowbird does **not** offer self-service, public API sign-up. The integration surface is the **Flowbird HUB**, documented at [docs.flowbirdhub.com](https://docs.flowbirdhub.com/) (Stoplight) and secured with **OAuth2 and client certificates**, with role-based access control and ownership filters. Access is granted to cities, transport agencies, and integration partners under contract; the live endpoint reference is not publicly crawlable. The Flowbird HUB API entries in `apis.yml` are therefore **modeled logical APIs** (`endpointsModeled: true`) derived from Flowbird's published platform descriptions, not scraped from a public reference.
+Everything profiled for Flowbird is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/flowbird/](https://apis.io/providers/flowbird/)** — or go straight to one of the APIs or properties below.
 
-**Pricing is contract/tender-based** (municipal procurement, G-Cloud listings) and is not published as public tiers, so no `plans/` is included. No public WebSocket API is offered (see `review.yml`).
+### APIs (4)
 
-> **Ownership note:** Flowbird is owned by EasyPark Group. The **ParkWhiz / BestParking** parking product and its v4 developer API are **not** part of Flowbird — that lineage (ParkWhiz + BestParking → Arrive/Arrive Mobility) merged into **FlashParking (Flash)** in January 2021 and is cataloged separately as `all/parkwhiz`. Flowbird does not own or expose the ParkWhiz/Arrive API.
+- [Flowbird HUB Parking Sessions API](https://apis.io/apis/flowbird/flowbird-hub-parking-sessions-api/) — Start, stop, extend, and query active and historical parking sessions across pay-station, mobile-app, and permit channels, and expose real-time session…
+- [Flowbird HUB Tariffs and Rights API](https://apis.io/apis/flowbird/flowbird-hub-tariffs-rights-api/) — Configure and read parking tariffs, pricing rules, and rights (digital permits, subscriptions, and eligibility) consistently across every sales channel.…
+- [Flowbird HUB Pay Stations API](https://apis.io/apis/flowbird/flowbird-hub-pay-stations-api/) — Retrieve the inventory, configuration, health/status, and collection (coin, card, and cash) data for Flowbird pay stations and terminals managed by the…
+- [Flowbird HUB Transactions API](https://apis.io/apis/flowbird/flowbird-hub-transactions-api/) — Read parking and mobility payment transactions and revenue/reporting data across channels for reconciliation and analytics, with role-based access and…
 
-## Tags
+### Published properties
 
-- Parking
-- Urban Mobility
-- Transit Ticketing
-- Payments
-- Smart City
-- Pay Stations
-- EV Charging
-- Digital Permits
-- Partner Gated
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## Timestamps
+#### Security (1)
 
-- **Created:** 2026-07-03
-- **Modified:** 2026-07-03
+Authentication, trust centre, and vulnerability disclosure.
 
-## APIs
+- [Flowbird Domain Security](https://apis.io/security/flowbird/flowbird-domain-security/)
 
-### Flowbird HUB Parking Sessions API
+## Where to find this API
 
-Start, stop, extend, and query active and historical parking sessions across pay-station, mobile-app, and permit channels, and expose real-time session state to enforcement and occupancy consumers. *Endpoints modeled from Flowbird HUB platform descriptions; live reference is OAuth2/certificate secured and contract-gated.*
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
-- **Human URL:** [https://docs.flowbirdhub.com/](https://docs.flowbirdhub.com/)
-
-#### Tags
-
-- Parking Sessions
-- Mobile Parking
-- Enforcement
-
-### Flowbird HUB Tariffs and Rights API
-
-Configure and read parking tariffs, pricing rules, and rights (digital permits, subscriptions, eligibility) consistently across every sales channel. Flowbird documents that tariffs and rights can be managed through the HUB UI or via the API. *Endpoints modeled; live surface is partner/agency-gated.*
-
-- **Human URL:** [https://docs.flowbirdhub.com/](https://docs.flowbirdhub.com/)
-
-#### Tags
-
-- Tariffs
-- Rights
-- Permits
-
-### Flowbird HUB Pay Stations API
-
-Retrieve the inventory, configuration, health/status, and collection (coin, card, cash) data for Flowbird pay stations and terminals managed by the central platform. *Endpoints modeled; documented live API is certificate-secured and access-scoped per contract.*
-
-- **Human URL:** [https://docs.flowbirdhub.com/](https://docs.flowbirdhub.com/)
-
-#### Tags
-
-- Pay Stations
-- Terminals
-- Assets
-
-### Flowbird HUB Transactions API
-
-Read parking and mobility payment transactions and revenue/reporting data across channels for reconciliation and analytics, with role-based access and ownership filters. Bulk export is also available via Flowbird's service desk. *Endpoints modeled; live API is OAuth2/certificate secured and contract-gated.*
-
-- **Human URL:** [https://docs.flowbirdhub.com/](https://docs.flowbirdhub.com/)
-
-#### Tags
-
-- Transactions
-- Payments
-- Reporting
-
-## Common Properties
-
-- [LinkedIn](https://www.linkedin.com/company/flowbird)
 - [Website](https://www.flowbird.group)
 - [Documentation](https://docs.flowbirdhub.com/)
-- [Partner Access](https://www.flowbird.com/customer-partner-access/)
+- [Getting started](https://docs.flowbirdhub.com/#getting-started)
+- [Blog](https://www.flowbird.com/news/)
+- [Terms of service](https://www.flowbird.com/terms-conditions/)
+- [Privacy policy](https://www.flowbird.com/privacy-policy/)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Kin Score 17.1** — emerging · rubric 0.24.0 · scored 2026-10-20
+
+| Facet | Score |
+|---|---|
+| Discoverability | 64.3 |
+| Contract quality | 0.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 0.0 |
+| Developer ergonomics | 33.3 |
+| Access clarity | 21.1 |
+
+**Agent readiness 0.0** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 11.5** — Energy & Utilities
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/flowbird/](https://apis.io/providers/flowbird/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Flowbird: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/flowbird/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
